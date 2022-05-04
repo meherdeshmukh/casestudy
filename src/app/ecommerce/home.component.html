@@ -1,0 +1,30 @@
+<header class="flex justify-end">
+  <div class="toggle-button-cover">
+    <div class="button b2" id="button-10">
+      <input (change)="changeView($event)" type="checkbox" class="checkbox" />
+      <div class="knobs">
+        <span>Grid</span>
+      </div>
+      <div class="layer"></div>
+    </div>
+  </div>
+  <label class="flex"
+    ><p class="padding-10">Filter</p>
+
+    <select #sortS (change)="sort(sortS.value)">
+      <option value="default">Default</option>
+      <option value="asc">Price- Low to High</option>
+      <option value="desc">Price- High to Low</option>
+    </select>
+  </label>
+</header>
+<main class="custom-flex">
+  <app-product-card
+    [ngClass]="{
+      'width-25': viewtype === 'grid',
+      'width-50': viewtype !== 'grid'
+    }"
+    *ngFor="let product of allProducts"
+    [productObj]="product"
+  ></app-product-card>
+</main>

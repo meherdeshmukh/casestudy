@@ -1,0 +1,7 @@
+<div class="card">
+  <img loading="lazy" height="120px" width="150px" [src]="productObj.image" />
+  <div class="body">
+    <p class="truncate">{{ productObj.title }}</p>
+    <h4>{{ productObj.price | currency: "INR" }}</h4>
+  </div>
+</div>

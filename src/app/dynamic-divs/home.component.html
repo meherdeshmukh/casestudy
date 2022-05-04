@@ -1,0 +1,9 @@
+<main class="flex">
+  <div
+    class="size"
+    *ngFor="let each of availDivs; let ind = index"
+    (click)="displaySelected(ind)"
+  >
+    <button>Show Alert</button>
+  </div>
+</main>

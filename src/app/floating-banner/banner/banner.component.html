@@ -1,0 +1,6 @@
+<div class="outer custom-justify" *ngIf="nestedL === 1">
+  <h2 class="float">A floating banner text which keeps on rotating</h2>
+</div>
+<div class="outer" *ngIf="nestedL > 1">
+  <app-banner [nestedL]="nestedL - 1"></app-banner>
+</div>

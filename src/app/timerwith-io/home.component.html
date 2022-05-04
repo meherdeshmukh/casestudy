@@ -1,0 +1,14 @@
+<div class="row">
+  <app-display-timer
+    class="w-half border"
+    [timerObj]="receivedReq"
+  ></app-display-timer>
+  <app-input-timer
+    class="w-half border"
+    (triggeredEvent)="handleEvent($event)"
+  ></app-input-timer>
+</div>
+<div class="row">
+  <app-logger [logCollection]="trackArray" class="w-half"></app-logger>
+  <app-tracker [counts]="countsObj" class="w-half"></app-tracker>
+</div>

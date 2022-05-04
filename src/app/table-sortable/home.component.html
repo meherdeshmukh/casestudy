@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th *ngFor="let header of headers" (click)="sortColumn(header)">
+      {{ header }}
+      <ng-container *ngIf="header === sortObj.col"
+        ><span
+          [ngClass]="{
+            asc: sortObj.order === 'asc',
+            desc: sortObj.order === 'desc'
+          }"
+        ></span>
+      </ng-container>
+    </th>
+  </tr>
+  <tr *ngFor="let res of response">
+    <td *ngFor="let val of getValues(res)">
+      {{ val }}
+    </td>
+  </tr>
+</table>

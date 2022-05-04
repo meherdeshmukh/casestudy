@@ -1,0 +1,32 @@
+td {
+  border: 1px solid #333;
+  text-align: center;
+  padding: 15px;
+}
+table {
+  padding: 20px;
+  width: 100%;
+}
+th {
+  cursor: pointer;
+}
+
+.asc {
+  position: absolute;
+  margin-left: 6px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 15px solid gray;
+}
+
+.desc {
+  position: absolute;
+  margin-left: 6px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 15px solid gray;
+}

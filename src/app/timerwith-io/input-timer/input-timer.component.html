@@ -1,0 +1,12 @@
+<!-- <div class="row">
+  <app-display-timer class="w-half border" [timerObj]="triggeredEvent"></app-display-timer>
+  <div class="w-half border">
+  </div>
+</div> -->
+<label
+  >Enter Timer Limit <input [(ngModel)]="valEntered" type="number"
+/></label>
+<br />
+<br />
+<button (click)="registerEvt(buttonType)">{{ buttonType }}</button> &nbsp;
+<button (click)="registerEvt('Reset')">reset</button>
